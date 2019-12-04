@@ -1,5 +1,4 @@
-wire1 = %w(R8 U5 L5 D3)
-wire2 = %w(U7 R6 D4 L4)
+
 
 @grid = Array.new()
 
@@ -77,13 +76,26 @@ def draw_wire(wire, origin_x, origin_y, width)
     end
 end
 
-width = 11
-height = 10
-origin_x = 1
-origin_y = 8
+# wire1 = %w(R8 U5 L5 D3)
+# wire2 = %w(U7 R6 D4 L4)
+# width = 11
+# height = 10
+# origin_x = 1
+# origin_y = 8
+# create_grid(width, height)
+# set_origin(origin_x, origin_y, width)
+# draw_wire(wire1, origin_x, origin_y, width)
+# draw_wire(wire2, origin_x, origin_y, width)
+# draw_grid(width, height)
+
+wire1 = %w(R75 D30 R83 U83 L12 D49 R71 U7 L72)
+wire2 = %w(U62 R66 U55 R34 D71 R55 D58 R83)
+width = 167
+height = 120
+origin_x = 100
+origin_y = 100
 create_grid(width, height)
 set_origin(origin_x, origin_y, width)
 draw_wire(wire1, origin_x, origin_y, width)
 draw_wire(wire2, origin_x, origin_y, width)
 draw_grid(width, height)
-
