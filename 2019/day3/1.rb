@@ -97,5 +97,5 @@ origin_y = 100
 create_grid(width, height)
 set_origin(origin_x, origin_y, width)
 draw_wire(wire1, origin_x, origin_y, width)
-draw_wire(wire2, origin_x, origin_y, width)
+# draw_wire(wire2, origin_x, origin_y, width)
 draw_grid(width, height)
