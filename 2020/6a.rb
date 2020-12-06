@@ -5,9 +5,38 @@
 # Get all inputs, split into array by empy line
 # For every element in array, subdivide into arrays
 
-input = File.read("./6.input").split(/^\s*$/).map! {|foo| foo.split('\\n').map!{|bar| bar.strip}}
-# input.each do |group| 
-#     group.map! { |person| person.split('\\n')}
-# end
+# INPUT
 
-puts input.to_s
+#```
+# abc
+
+# a
+# b
+# c
+
+# ab
+# ac
+
+# a
+# a
+# a
+# a
+
+# b
+#````
+
+# DESIRED OUTPUT
+# [ [abc], [a,b,c], [ab,ac] ] 
+
+input = File.read("./6.input").split(/^\s*$/).collect{|group| group.strip.split(/\n/)}
+p input
+
+
+total = 0
+# input.each do |group| 
+#     puts total
+#     total = total + group.join.chars.uniq.count
+# end
+input.collect{ |x| total = total + x.join.chars.uniq.count}
+puts "------"
+puts total
