@@ -28,7 +28,7 @@
 # DESIRED OUTPUT
 # [ [abc], [a,b,c], [ab,ac] ] 
 
-input = File.read("./6.input").split(/^\s*$/).collect{|group| group.strip.split(/\n/)}
+input = File.read("#{__dir__}/6.input").split(/^\s*$/).collect{|group| group.strip.split(/\n/)}
 p input
 
 
